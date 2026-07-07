@@ -1,0 +1,69 @@
+# 编译生成的程序
+*.exe
+*.out
+*.o
+*.obj
+*.elf
+
+# 日志、临时文件
+*.log
+*.tmp
+*.bak
+
+# IDE工具文件（VS/CLion/Dev-C++）
+.vscode/
+.vs/
+Debug/
+Release/
+*.sln
+*.suo
+*.vcxproj.user
+
+# 系统隐藏文件
+.DS_Store
+Thumbs.db
+
+# 本地配置
+config.ini
+
+# Java编译class文件
+*.class
+bin/
+target/
+build/
+out/
+
+# Maven依赖缓存
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+
+# Gradle
+.gradle/
+gradle-wrapper.jar
+
+# IDE配置 IDEA/Eclipse/VSCode
+.idea/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.c9/
+.vscode/
+
+# 日志临时文件
+*.log
+*.tmp
+*.bak
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 打包产物
+*.jar
+*.war
+*.zip
