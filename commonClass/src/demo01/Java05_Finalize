@@ -1,0 +1,11 @@
+一.在java中final、finalize和finally有什么区别
+    1、final：
+        -- 被final 修饰的变量,变为常量
+        -- 被final 修饰的类，不可继承
+        -- 被final 修饰的方法，不可重写
+    2、finalize：
+        -- 回收前调用最后一次
+    3、finally：
+        在异常处理时最后必须执行的语句
+
+2、深度克隆和浅度克隆的原理？

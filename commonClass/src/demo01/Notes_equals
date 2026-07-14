@@ -1,0 +1,76 @@
+// java.lang.Object 源码
+// 比较的是地址是否相同
+public boolean equals(Object obj) {
+    return (this == obj);
+}
+
+
+// java.lang.String 源码（核心逻辑）
+// String重写了equals 比较的是内容
+public boolean equals(Object anObject) {
+    // 第一步：如果地址相同（就是同一个对象），直接返回 true（性能优化）
+    if (this == anObject) {
+        return true;
+    }
+
+    // 第二步：判断传进来的参数是不是 String 类型
+    if (anObject instanceof String) {
+        String anotherString = (String) anObject; // 安全强转
+
+        // 第三步：比较字符数组的长度（String底层是char[]或byte[]）
+        int n = value.length;
+        if (n == anotherString.value.length) {
+            char v1[] = value;
+            char v2[] = anotherString.value;
+            int i = 0;
+            // 第四步：循环比较里面的每一个字符
+            while (n-- != 0) {
+                if (v1[i] != v2[i]) // 只要有一个字符不同，立刻返回 false
+                    return false;
+                i++;
+            }
+            return true; // 长度相同，每个字符都相同，返回 true
+        }
+    }
+
+    // 第五步：类型不是 String（比如传了个数字进来），直接返回 false
+    return false;
+}
+
+// 1. 定义核心字段：字符数组（就是String底层那个value）
+    private final char[] value;
+
+    // 2. 构造方法：把传进来的字符串拆成字符数组存起来
+    public EqualsString(String str) {
+        this.value = str.toCharArray(); // 利用JDK现成方法转成char[]
+    }
+
+    // 3. 重写equals（完美模仿String源码逻辑）
+    @Override
+    public boolean equals(Object obj) {
+        // 第一步：地址相同，秒返回true
+        if (this == obj) {
+            return true;
+        }
+
+        // 第二步：类型判断（只跟自己类比较）
+        if (obj instanceof EqualsString) {
+            EqualsString another = (EqualsString) obj; // 安全强转
+
+            // 第三步：比较长度
+            int n = this.value.length;
+            if (n == another.value.length) {
+                char[] v1 = this.value;
+                char[] v2 = another.value;
+                int i = 0;
+                // 第四步：逐个字符对比
+                while (n-- != 0) {
+                    if (v1[i] != v2[i]) {
+                        return false; // 只要有一个不同就返回false
+                    }
+                    i++;
+                }
+                return true; // 长度相同，每个字符都相同，返回true
+            }
+        }
+        return false; // 类型不对或长度不对，返回false
