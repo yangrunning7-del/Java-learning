@@ -7,10 +7,10 @@ package demo11_abstract;
         注意：子类构造器必须调用父类构造器
  */
 
-class Dog extends Animal {
+public class Dog1 extends Animal {
     private String breed;   // 狗特有的品种
 
-    public Dog(String name ,String breed) {
+    public Dog1(String name , String breed) {
         super(name); // 调用父类构造器
         System.out.println("子类构造器 开始盖房子，品种设置为：" + breed);
     }
