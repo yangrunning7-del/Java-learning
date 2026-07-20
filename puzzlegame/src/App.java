@@ -1,6 +1,11 @@
-import ui.GameJFrame;
-import ui.LoginJFrame;
+package puzzlegame.src;
+
+
+import puzzlegame.src.ui.LoginJFrame;
 import ui.RegisterJFrame;
+import javax.swing.ImageIcon;
+
+
 
 public class App {
     public static void main(String[] args) {
@@ -9,8 +14,8 @@ public class App {
         // 要启动哪个界面，只需要new 对象就好。
 
 
-//        new LoginJFrame();
+        new LoginJFrame();
 //        new RegisterJFrame();
-        new GameJFrame();
+//        new GameJFrame();
     }
 }
