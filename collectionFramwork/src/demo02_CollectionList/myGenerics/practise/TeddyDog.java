@@ -1,0 +1,8 @@
+package demo02_CollectionList.myGenerics.practise;
+
+public class TeddyDog extends Dog{
+    @Override
+    public void eat() {
+        System.out.println("一只叫作"+ getName() +"的，"+getAge() +"岁的泰迪，正在吃牛头");
+    }
+}
