@@ -1,0 +1,5 @@
+LinkedList的底层原理：
+    1、LinkList的底层是一个链表，特点是增删块，但是查询慢，如果是双向链表查询的元素在头尾才会快
+    2、在创建LinkedList对象的时候，即在执行LinkedList<String> = new LinkedList<>()语句时
+        会默认创建一个节点，其中含有头节点和尾节点但是第一次是null
+    3.具体原理过程可以复习源码。
