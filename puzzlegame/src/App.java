@@ -2,9 +2,6 @@ package puzzlegame.src;
 
 
 import puzzlegame.src.ui.LoginJFrame;
-import ui.RegisterJFrame;
-import javax.swing.ImageIcon;
-
 
 
 public class App {
@@ -15,7 +12,5 @@ public class App {
 
 
         new LoginJFrame();
-//        new RegisterJFrame();
-//        new GameJFrame();
     }
 }
