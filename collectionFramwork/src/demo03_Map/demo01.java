@@ -34,16 +34,16 @@ public class demo01 {
 
         // 迭代器
         Iterator<String> it = set.iterator();
-        while(it.hasNext()) {
+        while (it.hasNext()) {
             String str = map.get(it.next());
             System.out.println(str);
         }
         System.out.println("==================================");
 
         // lambda表达式
-        set.forEach(s-> System.out.println(map.get(s)));
+        set.forEach(s -> System.out.println(map.get(s)));
         System.out.println("==================================");
-        set.forEach(new Consumer<String>(){
+        set.forEach(new Consumer<String>() {
             @Override
             public void accept(String s) {
                 System.out.println(map.get(s));

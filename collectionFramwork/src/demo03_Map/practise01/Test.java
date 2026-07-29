@@ -18,7 +18,7 @@ public class Test {
         ArrayList<String> list = new ArrayList<String>();
         // 利用随机数生成
         Random r = new Random();
-        for(int i = 0; i < 80; i++){
+        for (int i = 0; i < 80; i++) {
             // 随机从arr的四个选择一个，也就是从0~3选择一个数
             int index = r.nextInt(arr.length);
             list.add(arr[index]);
@@ -31,9 +31,9 @@ public class Test {
             if (map.containsKey(name)) {
                 // 存在，先获取当前已经被投票的次数
                 int count = map.get(name);
-                count ++;
+                count++;
                 map.put(name, count);
-            }else{
+            } else {
                 map.put(name, 1);
             }
         }
@@ -50,7 +50,7 @@ public class Test {
         System.out.println(map);
         System.out.println(max);
         for (Map.Entry<String, Integer> entry : set) {
-            if (entry.getValue() == max){
+            if (entry.getValue() == max) {
                 System.out.println(entry.getKey());
             }
         }
