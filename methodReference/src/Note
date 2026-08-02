@@ -3,3 +3,12 @@
         把已经存在的方法拿来使用，当作抽象方法的方法体
     方法引用的符号为::
     方法引用的规则和注意事项
+
+
+practice1:
+    ArrayList<String> list = new ArrayList<>();
+    Collections.addAll(list, "张无忌,15","周芷若,14","赵敏,13","张强,20","张三丰,100","张翠山,40","张良,35");
+
+    //将list中的数据放到流里面，将流里面的数据通过方法引用Student::new，转化为Student类型，再将Student类型数据转化为Student类型的数组
+    Student[] arr = list.stream().map(Student::new).toArray(Student[]::new);
+    System.out.println(arr);
