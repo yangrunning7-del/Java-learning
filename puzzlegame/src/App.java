@@ -10,7 +10,6 @@ public class App {
 
         // 要启动哪个界面，只需要new 对象就好。
 
-
         new LoginJFrame();
     }
 }
